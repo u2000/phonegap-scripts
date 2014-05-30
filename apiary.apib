@@ -12,31 +12,31 @@ Notes related resources of the **Publisherz API**
 
 + Response 200 (application/json)
 
-{ "page":1,"results": [ 
-  { 
-    "id" : 1,
-    "name" : "Breathless"
-  }, 
-  { 
-    "id" : 2,
-    "name" : "Dr. Strangelove "
-  }, 
-  { 
-  "id" : 6,
-  "name" : "The Princess Bride"
-  }
-] }
+        { "page":1,"results": [ 
+        { 
+            "id" : 1,
+            "name" : "Breathless"
+        }, 
+        { 
+            "id" : 2,
+            "name" : "Dr. Strangelove "
+        }, 
+        { 
+        "id" : 6,
+        "name" : "The Princess Bride"
+        }
+        ] }
         
 ### Create a Movie [POST]
 
 + Request (application/json)
 
-{ "name" : "Dr. Strangelove ",
-  "director" : "Stanley Kubrick",
-  "writer" : "Terry Southern",
-  "release_date" : 1964,
-  "storyline" : "An insane general starts a process to nuclear holocaust that a war room of politicians and generals frantically try to stop."
-}
+        { "name" : "Dr. Strangelove ",
+        "director" : "Stanley Kubrick",
+        "writer" : "Terry Southern",
+        "release_date" : 1964,
+        "storyline" : "An insane general starts a process to nuclear holocaust that a war room of politicians and generals frantically try to stop."
+        }
 
 + Response 201 (application/json)
 
@@ -57,13 +57,13 @@ A single Movie object with all its details
 
     + Body
 
-{ "id" : 2,
-  "name" : "Dr. Strangelove ",
-  "director" : "Stanley Kubrick",
-  "writer" : "Terry Southern",
-  "release_date" : 1964,
-  "storyline" : "An insane general starts a process to nuclear holocaust that a war room of politicians and generals frantically try to stop."
-}
+            { "id" : 2,
+                "name" : "Dr. Strangelove ",
+                "director" : "Stanley Kubrick",
+                "writer" : "Terry Southern",
+                "release_date" : 1964,
+                "storyline" : "An insane general starts a process to nuclear holocaust that a war room of politicians and generals frantically try to stop."
+            }
 
 ### Remove a Movie [DELETE]
 + Response 204
