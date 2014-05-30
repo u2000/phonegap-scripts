@@ -40,13 +40,25 @@ Notes related resources of the **Publisherz API**
 
 + Response 201 (application/json)
 
-        { "id": 3, "title": "Buy cheese and bread for breakfast." }
+        {  "id": 1
+        "name" : "Dr. Strangelove ",
+        "director" : "Stanley Kubrick",
+        "writer" : "Terry Southern",
+        "release_date" : 1964,
+        "storyline" : "An insane general starts a process to nuclear holocaust that a war room of politicians and generals frantically try to stop.",
+        "updated_at":"2014-05-30T18:54:12Z"
+        }
 
 ## Movie [/movies/{id}]
 A single Movie object with all its details
 
 + Parameters
     + id (required, number, `1`) ... Numeric `id` of the Movie to perform action with. Has example value.
+    + name (required, string)
+    + director (required, string)
+    + writer (required, string)
+    + release_date (required, string)
+    + storyline (required, string)
 
 ### Retrieve a Movie [GET]
 + Response 200 (application/json)
