@@ -1,84 +1,47 @@
 FORMAT: 1A
-HOST: http://publisherz.herokuapp.com
+HOST: http://www.google.com
 
-# Publisherz
-Publisherz API provides info on music, movies, and books.
+# Experiment
+Notes API is a *short texts saving* service similar to its physical paper presence on your tablez.
 
-# Group Movies
-Movie-related resources of the **Publisherz API**
+# Group Notes
+Notes related resources of the **Notes API**
 
-## Movies Collection [/movies]
-### List all Movies [GET]
-
-+ Request
-    
-    + Headers
-    
-            Accept: application/json
-
+## Notes Collection [/notes]
+### List all Notes [GET]
 + Response 200 (application/json)
 
-    + Body
-    
-            { "page":1,"results": [ 
-            { 
-                "id" : 1,
-                "name" : "Breathless"
-            }, 
-            { 
-                "id" : 2,
-                "name" : "Dr. Strangelove "
-            }, 
-            { 
-             "id" : 6,
-             "name" : "The Princess Bride"
-            }
-            ] }
-        
-### Create a Movie [POST]
+        [{
+          "id": 1, "title": "Jogging in park"
+        }, {
+          "id": 2, "title": "Pick-up posters from post-office"
+        }]
 
+### Create a Note [POST]
 + Request (application/json)
 
-        { "name" : "Dr. Strangelove ",
-        "director" : "Stanley Kubrick",
-        "writer" : "Terry Southern",
-        "release_date" : 1964,
-        "storyline" : "An insane general starts a process to nuclear holocaust that a war room of politicians and generals frantically try to stop."
-        }
+        { "title": "Buy cheese and bread for breakfast." }
 
 + Response 201 (application/json)
 
-        {  "id": 1
-        "name" : "Dr. Strangelove ",
-        "director" : "Stanley Kubrick",
-        "writer" : "Terry Southern",
-        "release_date" : 1964,
-        "storyline" : "An insane general starts a process to nuclear holocaust that a war room of politicians and generals frantically try to stop.",
-        "updated_at":"2014-05-30T18:54:12Z"
-        }
+        { "id": 3, "title": "Buy cheese and bread for breakfast." }
 
-## Movie [/movies/{id}]
-A single Movie object with all its details
+## Note [/notes/{id}]
+A single Note object with all its details
 
 + Parameters
-    + id (required, number, `1`) ... Numeric `id` of the Movie to perform action with. Has example value.
+    + id (required, number, `1`) ... Numeric `id` of the Note to perform action with. Has example value.
 
-### Retrieve a Movie [GET]
+### Retrieve a Note [GET]
 + Response 200 (application/json)
 
     + Header
 
-            Accept: application/json
+            X-My-Header: The Value
 
     + Body
 
-            { "id" : 2,
-                "name" : "Dr. Strangelove ",
-                "director" : "Stanley Kubrick",
-                "writer" : "Terry Southern",
-                "release_date" : 1964,
-                "storyline" : "An insane general starts a process to nuclear holocaust that a war room of politicians and generals frantically try to stop."
-            }
+            { "id": 2, "title": "Pick-up posters from post-office" }
 
-### Remove a Movie [DELETE]
+### Remove a Note [DELETE]
 + Response 204
